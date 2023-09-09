@@ -4,7 +4,6 @@ go 1.21
 
 require (
 	github.com/go-ini/ini v1.67.0
-	github.com/peterbourgon/ff/v3 v3.4.0
 )
 
 require (

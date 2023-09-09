@@ -2,8 +2,6 @@ package commands
 
 import (
 	"context"
-	"fmt"
-	"github.com/manel-bc/gud/internal/models"
 )
 
 func Add(ctx context.Context, args []string) error {
@@ -24,15 +22,6 @@ func Commit(ctx context.Context, args []string) error {
 
 func HashObject(ctx context.Context, args []string) error {
 	panic("not implemented")
-}
-
-func Init(_ context.Context, args []string) error {
-	if len(args) != 1 {
-		return fmt.Errorf("init requires exactly one option but you provided: %v", args)
-	}
-	path := args[0]
-	_, err := models.NewRepository(path, true)
-	return err
 }
 
 func Log(ctx context.Context, args []string) error {
