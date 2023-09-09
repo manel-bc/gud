@@ -2,9 +2,9 @@
 
 Basic drop-in replacement for git, meant only as a toy project
 
-Inspired by [wyag](https://wyag.thb.lt/),but written in Go instead of Python.
+Inspired by [wyag](https://wyag.thb.lt/), but written in Go instead of Python.
 
-Only the following commands are supported:
+Only the following git ommands are supported:
 
  - add
  - cat-file
