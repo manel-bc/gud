@@ -1,0 +1,27 @@
+version: '3'
+
+tasks:
+  check:
+    cmds:
+      - task: deps
+      - task: build
+      - task: lint
+
+  deps: go mod tidy && go mod download
+
+  update-deps: go get -u all && go mod tidy
+
+  lint: golangci-lint run --fix ./...
+
+  build: cd cmd/gud && go build
+
+  play:
+    cmds:
+      - task: build
+      - cd playground &&
+        cp ../cmd/gud/gud . &&
+        chmod +x gud &&
+        ./gud {{.CLI_ARGS}}
+
+  reset-play: rm -rf playground && mkdir playground
+
