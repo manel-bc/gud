@@ -1,6 +1,7 @@
 # git gud
 
-Basic drop-in replacement for git, meant only as a toy project
+Basic drop-in replacement for git, written for no other purpose than to
+git gud at understanding git internals. 
 
 Inspired by [wyag](https://wyag.thb.lt/), but written in Go instead of Python.
 
